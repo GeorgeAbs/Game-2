@@ -1,0 +1,12 @@
+.functionsWar, .functionsPeace{
+	position: absolute;
+	top: 0%;
+}
+.butInList{
+	width: 30vh;
+}
+.svgLine{
+	position: absolute;
+	top: 0%;
+	z-index: -1;
+}

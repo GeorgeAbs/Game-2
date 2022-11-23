@@ -1,0 +1,40 @@
+.firstMenu{
+	display: grid;
+	grid-template-columns: 20% auto;
+}
+.newGame{
+	position: relative;
+	overflow: hidden;
+	justify-self: center;
+}
+.joinToGame{
+	position: relative;
+	overflow: hidden;
+	justify-self: center;
+}
+.listOfGames{
+	list-style: none;
+	overflow: scroll;
+	overflow-x: hidden;
+	height: 300px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: green; 
+}
+.butInList{
+	margin: 1px;
+	width: 200px;
+}

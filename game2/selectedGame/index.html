@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>selectedGame</title>
+</head>
+<body>
+	<div class="main">
+		<img class="mainPic" src="img/fontParties.png"></img>
+		<div class="parties">
+			<div class="party1 party">
+				<div class="percentsOfParty1">Рейтинг: <span class="percentsSpan" value="1"></span>%</div>
+				<img class="scieneImage house" value="1" src="img/orange_house.png"></img>
+				<img class="arrow hideMenu" value="1" src="img/arrow_up.png"></img>
+			</div>
+			<div class="party2 party">
+				<div class="percentsOfParty2">Рейтинг: <span class="percentsSpan" value="2"></span>%</div>
+				<img class="scieneImage house" value="2" src="img/blue_house.png"></img>
+				<img class="arrow hideMenu" value="2" src="img/arrow_up.png"></img>
+			</div>
+			<div class="party3 party">
+				<div class="percentsOfParty3">Рейтинг: <span class="percentsSpan" value="3"></span>%</div>
+				<img class="scieneImage house" value="3" src="img/red_house.png"></img>
+				<img class="arrow hideMenu" value="3" src="img/arrow_up.png"></img>
+			</div>
+			<div class="party4 party">
+				<div class="percentsOfParty4">Рейтинг: <span class="percentsSpan" value="4"></span>%</div>
+				<img class="scieneImage house" value="4" src="img/violet_house.png"></img>
+				<img class="arrow hideMenu" value="4" src="img/arrow_up.png"></img>
+			</div>
+			<div class="party5 party">
+				<div class="percentsOfParty5">Рейтинг: <span class="percentsSpan" value="5"></span>%</div>
+				<img class="scieneImage house" value="5" src="img/yellow_house.png"></img>
+				<img class="arrow hideMenu" value="5" src="img/arrow_up.png"></img>
+			</div>
+			<div class="party6 party">
+				<div class="percentsOfParty6">Рейтинг: <span class="percentsSpan" value="6"></span>%</div>
+				<img class="scieneImage house" value="6" src="img/green_house.png"></img>
+				<img class="arrow hideMenu" value="6" src="img/arrow_up.png"></img>
+			</div>
+			<div class="party7 party hideMenu">
+				<div class="percentsOfParty7" id="peoplePercents"><span>Количество неопределившихся граждан:</span><span class="percentsSpan" value="7"></span><span>%</span></div>
+				<img class="scieneImage" id="peopleImg" value="7" src="img/people.png"></img>
+			</div>
+			<div class="patryNameCtrls">
+				<div class="title">Дайте название своей партии и выберите 1 из 6 штаб-квартир</div>
+				<input type="text" maxlength="10" pattern="[0-9\.\-]*" placeholder="Название партии" class="nameInput"></input>
+				<!--<button class="confurmNameBut">Зарегистрировать мою партию</button>-->
+			</div>
+			<div class="startGame" style="visibility: hidden;">
+				<button class="startGameBut">Начинайте выборы по готовности всех игроков</button>
+			</div>
+			<div class="moneyAndTimer" style="visibility: visible;">
+				<div class="turn">Текущий ход: <span class="turnSpan">0</span> из 15</div>
+				<div class="money">Доступные ресурсы: <span class="moneySpan">...</span></div>
+				<div class="timer">До конца хода: <span class="timerSpan">...</span></div>
+				<div class="kickedOffPeople">Доп. проценты от активности: <span class="kickedOffPeopleSpan">...</span></div>
+			</div>
+		</div>
+		<div class="croudAndSciene">
+			<img class="phoneImg" id="phone" src="img/phone.png"></img>
+			<div class="phoneParties"></div>
+		</div>
+	</div>
+	<div class="functionsWar hideMenu" placeNum="0">
+		<ul class='ulFunctions'>
+		</ul>
+	</div>
+	<div class="functionsPeace hideMenu" placeNum="0">
+		<ul class='ulFunctions'>
+		</ul>
+	</div>
+	<!--<script type="text/javascript" src="js/updateAdminButton.js"></script>-->
+	
+	
+	<div class="lines">
+		<svg class="svgLine" from="1" to="2">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255, 102, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="1" to="3">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255, 102, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="1" to="4">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255, 102, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="1" to="5">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255, 102, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="1" to="6">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255, 102, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="1" to="7">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255, 102, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="2" to="1">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0, 102, 255);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="2" to="3">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0, 102, 255);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="2" to="4">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0, 102, 255);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="2" to="5">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0, 102, 255);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="2" to="6">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0, 102, 255);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="2" to="7">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0, 102, 255);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="3" to="1">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255,0,0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="3" to="2">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255,0,0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="3" to="4">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255,0,0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="3" to="5">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255,0,0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="3" to="6">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255,0,0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="3" to="7">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255,0,0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="4" to="1">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(153, 0, 255);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="4" to="3">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(153, 0, 255);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="4" to="2">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(153, 0, 255);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="4" to="5">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(153, 0, 255);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="4" to="6">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(153, 0, 255);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="4" to="7">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(153, 0, 255);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="5" to="1">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255, 204, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="5" to="3">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255, 204, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="5" to="4">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255, 204, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="5" to="2">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255, 204, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="5" to="6">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255, 204, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="5" to="7">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255, 204, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="6" to="1">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0, 102, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="6" to="3">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0, 102, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="6" to="4">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0, 102, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="6" to="5">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0, 102, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="6" to="2">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0, 102, 0);stroke-width:2" />
+		</svg>
+		<svg class="svgLine" from="6" to="7">
+  			<line class="lineDiv" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0, 102, 0);stroke-width:2" />
+		</svg>
+	</div>
+	<script type="text/javascript" src="js/arrows_and_info.js"></script>
+	<script type="text/javascript" src="js/functionsWindow.js"></script>
+	<script type="text/javascript" src="js/confirmName.js"></script>
+	<script type="text/javascript" src="js/updateFreeHouses.js"></script>
+	<script type="text/javascript" src="js/lookingForFinishedRounds.js"></script>
+	<script type="text/javascript" src="js/addFunctions.js"></script>
+</body>
+</html>

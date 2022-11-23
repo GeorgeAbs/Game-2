@@ -1,0 +1,127 @@
+.parties{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 25% 50% 25%;
+	height: 98vh;
+}
+.mainPic{
+	position: absolute;
+	width: 70vw;
+	height: 98vh;
+	z-index: -2;
+}
+.party1, .party2, .party3, .party4, .party5, .party6, .party7, .patryNameCtrls{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 25% 50% 25%;
+	width: 100%;
+	height: 100%;
+	align-self: center;
+	margin: 0px auto;
+	
+}
+.party1{
+	grid-row: 1;
+	grid-column: 2;
+}
+.party2{
+	grid-row: 1;
+	grid-column: 3;
+}
+.party3{
+	grid-row: 2;
+	grid-column: 4;
+	max-height: 50%;
+}
+.party4{
+	grid-row: 3;
+	grid-column: 3;
+}
+.party5{
+	grid-row: 3;
+	grid-column: 2;
+}
+.party6{
+	grid-row: 2;
+	grid-column: 1;
+	max-height: 50%;
+}
+.party7{
+	grid-row: 2;
+	grid-column: 2/4;
+}
+.house{
+	grid-row: 2;
+	grid-column: 1;
+}
+[class*="percentsOfParty"]{
+	margin: 0px auto;
+}
+.patryNameCtrls{
+	
+	margin: 0px auto;
+	grid-row: 2;
+	grid-column: 2/4;
+}
+.startGame{
+	margin: 0px auto;
+	grid-row: 2;
+	grid-column: 2/4;
+}
+.moneyAndTimer{
+	margin: 0px auto;
+	grid-row: 1;
+	grid-column: -1;
+}
+.house, .arrow{
+	margin: 0px auto;
+	height: 100%;
+	object-fit: cover;
+}
+.arrow{
+	overflow: auto;
+	max-height: 100%;
+	grid-row: 3;
+	grid-column: 1;
+}
+#phone{
+	position: absolute;
+	top: 0%;
+	object-fit: cover;
+}
+.phoneParties{
+	position: relative;
+	top: 30vh;
+	margin-left: 2vw;
+	max-width: 20vw;
+	max-height: 50vh;
+}
+.phonePartyDiv{
+	margin-top: 3vh;
+}
+.phonePartyDiv span{
+	text-decoration: underline;
+}
+.lines{
+	
+}
+.title, .nameInput{
+}
+.title{
+	grid-row: 1;
+	grid-column: 1;
+}
+.nameInput{
+	grid-row: 2;
+	grid-column: 1;
+	max-height: 1rem;
+}
+.phoneSmallImgDiv{
+	max-height: 5vh;
+}
+#peopleImg{
+	margin: 0px auto;
+}
+#peoplePercents span{
+	background-color: lightgreen;
+}
