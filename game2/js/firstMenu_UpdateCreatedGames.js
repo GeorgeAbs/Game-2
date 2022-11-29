@@ -44,7 +44,7 @@ function createCreatedGamesButtons(returnedValue)
 					xmlhttp.onreadystatechange = function() {
     				   	if (this.readyState == 4 && this.status == 200)
     				   	{
-    				   		window.location.href = "http://game2/selectedGame/index.html";
+    				   		window.location.href = "http://game2:81/selectedGame/index.html";
     				   	}
     				}
     				xmlhttp.open("POST", "php/createNewGame_DB.php", true);//записать в session имя игры
